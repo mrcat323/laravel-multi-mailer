@@ -10,18 +10,9 @@ class MailServiceMiddleware
 {
     public function handle(Request $request, $next)
     {
-        $config = [
-            'driver' => 'smtp',
-            'host' => 'smtp.gmail.com',
-            'port' => 465,
-            'from' => ['address' => 'taylor@laravel.com', 'name' => 'Taylor'],
-            'password' => 'somepassword',
-            'encryption' => 'ssl'
-        ];
-
-        $mailer = new Mailer($config);
+        $mailer = new Mailer(username: 'taylor@gmail.com', password: 'laravel rocks');
         $mailer->setMail();
-        
+
         return $next($request);
     }
 }
