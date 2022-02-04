@@ -1,7 +1,7 @@
 {
     "name": "mrcat323/laravel-multi-mailer",
     "description": "Laravel package providing sending email from multiple smtp accounts",
-    "type": "package",
+    "keywords": ["laravel", "mailing", "multi mail", "smtp"],
     "license": "GPL-v2",
     "authors": [
         {
@@ -9,5 +9,9 @@
             "email": "mrcat323@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0",
+        "illuminate/http": "^8.0"
+    }
 }
